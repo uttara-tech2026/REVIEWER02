@@ -1,0 +1,6 @@
+.env
+data.json
+data.json.tmp
+media_cache/
+__pycache__/
+*.pyc

@@ -1,0 +1,12 @@
+# Optional. Railway auto-detects Python via requirements.txt and doesn't
+# need this file to deploy. It's only here so `ffprobe` (part of ffmpeg)
+# is available in the container, which lets the bot detect the duration
+# of videos bulk-added via .zip (needed for /sortqueue duration,
+# /filterqueue, and /trimqueue to work on those items).
+#
+# Videos sent directly to the bot in Telegram already have duration
+# supplied by Telegram itself, so this file is NOT required for those —
+# only for zip-extracted videos. Safe to delete if you don't care about
+# that edge case.
+[phases.setup]
+aptPkgs = ["ffmpeg"]
